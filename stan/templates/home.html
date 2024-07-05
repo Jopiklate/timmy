@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{%block head%}
+       <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+{%endblock%}
+{% block content
+    %}
+    <h1 align="center">Notes</h1>
+    <ul class="list-group list-group-flush" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+      </div>
+    </form>
+    <div class="tweet">
+        <p> Talk to us on  our social media accounts.</p>
+        <a href="https://x.com/JopiKlate">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+       
+        <img src="{{url_for('static',filename='images/Screenshot_5-7-2024_103625_x.com.jpeg')}}" class="image">
+
+        <a href="https://www.instagram.com/klatejopi/">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+       
+        <img src="{{url_for('static',filename='images/Screenshot_5-7-2024_11249_www.instagram.com.jpeg')}}" class="image2">
+        <a href="https://github.com/jopiklate">
+            <i class="fa-brands fa-square-github"></i>
+          </a>
+       
+        <img src="{{url_for('static',filename='images/Screenshot_5-7-2024_115154_github.com.jpeg')}}" class="image3">
+        <a href="https://www.linkedin.com/in/jopi-klate-3b3bb3317/">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+       
+        <img src="{{url_for('static',filename='images/Screenshot_5-7-2024_1223_www.linkedin.com.jpeg')}}" class="image4">
+
+    </div>
+    
+    {% endblock %}

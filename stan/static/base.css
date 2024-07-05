@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(lightblue,skyblue)
+}
+.kyle{
+    margin-top: 124px;
+    background: dodgerblue;
+}
+.cont{
+    font-size: 23px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.fa-github{
+    color: black;
+}
+.fa-github:hover{
+    background: linear-gradient(#049222,#938292);
+    transform: scale(1.2)
+}
+.fa-linkedin{
+    color: #109;
+}
+.fa-linkedin:hover{
+    background: linear-gradient(#049,#938);
+    transform: scale(1.2);
+}
+.fa-twitter{
+    color: #049;
+}
+.fa-twitter:hover{
+    background: linear-gradient(#733309,#284);
+    transform: scale(1.2);
+}
+.fa-instagram{
+    color: #932392;
+}
+.fa-instagram:hover{
+    background: linear-gradient(#0392,#293922);
+    transform: scale(1.2);
+}
+.fa-facebook{
+    color: #284282;
+}
+
+.fa-facebook:hover{
+    background: linear-gradient(yellow,green,red);
+    transform: scale(1.2);
+    color: #109;
+}
+.fa-google{
+    color: rgba(255,128,25);
+}
+.fa-google:hover{
+    background: linear-gradient(yellow,green,red);
+    transform: scale(1.2);
+    color: #109;
+}
+.navbar{
+    text-shadow: 3px 0px 0px #883723;
+    font-weight: 900;
+    background: linear-gradient(#523191,#636272)
+}
